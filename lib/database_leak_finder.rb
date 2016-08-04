@@ -1,4 +1,4 @@
-require 'handler'
+require 'database_leak_finder/handler'
 
 module DatabaseLeakFinder
   class << self
