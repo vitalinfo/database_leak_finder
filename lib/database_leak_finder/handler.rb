@@ -1,6 +1,3 @@
-require 'finder'
-require 'logger'
-
 module DatabaseLeakFinder
   module Handler
     class << self

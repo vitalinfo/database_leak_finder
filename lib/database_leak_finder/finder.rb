@@ -1,5 +1,3 @@
-require 'active_record'
-
 module DatabaseLeakFinder
   class Finder
     IGNORED_SYSTEM_TABLES = ['schema_migrations']

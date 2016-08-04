@@ -1,4 +1,7 @@
+require 'active_record'
+require 'database_leak_finder/finder'
 require 'database_leak_finder/handler'
+require 'database_leak_finder/logger'
 
 module DatabaseLeakFinder
   class << self
