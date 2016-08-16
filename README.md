@@ -17,6 +17,7 @@ config.include DatabaseLeakFinder
 
 ### Ignoring Tables
 You may have some tables that you don't want to report.
+
 Add this line to your `spec_helper.rb` before `config.include DatabaseLeakFinder`
 ```ruby
 DatabaseLeakFinder.config(ignored_tables: [list of tables])
