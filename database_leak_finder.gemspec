@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version		  = DatabaseLeakFinder::VERSION
   s.date			  = Time.new.strftime('%Y-%m-%d')
   s.summary		  = 'Find database leaks'
-  s.description	= "'Easy way to find spec which doesn't clear database after execution"
+  s.description	= "Easy way to find spec which doesn't clear database after execution"
   s.authors		  = ['Vital Ryabchinskiy']
   s.email			  = 'vital.ryabchinskiy@gmail.com'
   s.files			  = Dir['lib/**/*'] + ['README.md']
