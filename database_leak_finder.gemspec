@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.date			  = Time.new.strftime('%Y-%m-%d')
   s.summary		  = 'Find database leaks'
   s.description	= "'Easy way to find spec which doesn't clear database after execution"
-  s.authors		  = ['vitalinfo']
+  s.authors		  = ['Vital Ryabchinskiy']
   s.email			  = 'vital.ryabchinskiy@gmail.com'
   s.files			  = Dir['lib/**/*'] + ['README.md']
   s.homepage    = 'https://github.com/vitalinfo/database_leak_finder'
@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'bundler', '~> 1.10'
   s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'sqlite3'
 
   s.add_runtime_dependency 'activerecord', '>= 3.0.0'
   s.add_runtime_dependency 'rspec'

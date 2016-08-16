@@ -1,12 +1,13 @@
 module DatabaseLeakFinder
   class Finder
-    IGNORED_SYSTEM_TABLES = ['schema_migrations']
+    IGNORED_SYSTEM_TABLES = ['ar_internal_metadata', 'schema_migrations']
 
     def initialize(options)
       @ignored_tables = (options[:ignored_tables] || []) + IGNORED_SYSTEM_TABLES
     end
 
     def process
+      return [] unless ActiveRecord::Base.connected?
       filtered_tables.each_with_object({}) do |table, result|
         amount = count_for(table)
         result[table] = amount unless amount.zero?
@@ -26,7 +27,7 @@ module DatabaseLeakFinder
     end
 
     def tables
-      ActiveRecord::Base.connection.tables
+      ActiveRecord::Base.connection.data_sources
     end
   end
 end
