@@ -1,5 +1,7 @@
 # DatabaseLeakFinder [![Circle CI](https://circleci.com/gh/vitalinfo/database_leak_finder.svg?style=svg)](https://circleci.com/gh/vitalinfo/database_leak_finder) 
 
+Easy way to find problem in specs with uncleared DB data
+
 ## Installation
 
 Add the following to your Gemfile:
