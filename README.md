@@ -1,4 +1,4 @@
-# DatabaseLeakFinder [![Circle CI](https://circleci.com/gh/vitalinfo/database_leak_finder.svg?style=svg)]
+# DatabaseLeakFinder ![Circle CI](https://circleci.com/gh/vitalinfo/database_leak_finder.svg?style=svg)
 
 
 ## Installation
