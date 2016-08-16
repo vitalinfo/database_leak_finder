@@ -9,7 +9,7 @@ RSpec.describe DatabaseLeakFinder::Finder do
 
   it do
     expect(subject.process).to be_empty
-    rand(10).times{ Test.create }
+    (rand(10) + 1).times{ Test.create }
     tables = subject.process
     expect(tables).to eq "tests" => Test.count
     Test.destroy_all
