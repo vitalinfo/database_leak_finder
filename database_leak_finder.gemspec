@@ -15,9 +15,9 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'bundler', '~> 1.10'
   s.add_development_dependency 'rake', '~> 10.0'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'sqlite3', '~> 1.3'
 
   s.add_runtime_dependency 'activerecord', '>= 3.0.0'
-  s.add_runtime_dependency 'rspec'
-  s.add_runtime_dependency 'highline'
+  s.add_runtime_dependency 'rspec', '>= 3.0'
+  s.add_runtime_dependency 'highline', '>= 1.0'
 end
