@@ -1,9 +1,9 @@
 module DatabaseLeakFinder
   class Finder
-    IGNORED_SYSTEM_TABLES = ['ar_internal_metadata', 'schema_migrations']
+    IGNORED_SYSTEM_TABLES = ['ar_internal_metadata', 'schema_migrations', 'pg_stat_statements']
 
     def initialize(options)
-      @ignored_tables = (options[:ignored_tables] || []) + IGNORED_SYSTEM_TABLES
+      @ignored_tables = (options[:ignored_tables] || []).map(&:to_s) + IGNORED_SYSTEM_TABLES
     end
 
     def process

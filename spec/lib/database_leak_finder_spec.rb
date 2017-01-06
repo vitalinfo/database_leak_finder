@@ -21,7 +21,8 @@ RSpec.describe DatabaseLeakFinder do
     include described_class
     it do
       expect(DatabaseLeakFinder::Handler.send(:finder)
-                 .instance_variable_get('@ignored_tables')).to eq ['test', 'ar_internal_metadata', 'schema_migrations']
+                 .instance_variable_get('@ignored_tables'))
+          .to eq ['test', 'ar_internal_metadata', 'schema_migrations', 'pg_stat_statements']
     end
   end
 end
